@@ -10,7 +10,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 
 // Instructions ---->
 // Replace configPlaceholder with your firebase credentials
-import configPlaceholder from '../env';
+import {environment} from '../environments/environment';
 import { DropzoneDirective } from './dropzone.directive';
 import { UploaderComponent } from './uploader/uploader.component';
 import { UploadTaskComponent } from './upload-task/upload-task.component';
@@ -20,7 +20,7 @@ import { UploadTaskComponent } from './upload-task/upload-task.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(configPlaceholder),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireStorageModule,
   ],
